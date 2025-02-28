@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basketball registration</title>
     <style>
         body{
             margin: 0%;
@@ -38,11 +41,47 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">home</a></li>
-                <li><a href="index2.html">more</a></li>
+                <li><a href="index2.html">win give away</a></li>
             </ul>
         </nav>
-<header><H1>kyrie Irving</H1></header>
-        <p></p>
+<div style="text-align: center;">
+<header><H1>register for a chanch to win a freejersey</H1></header>
+<!--  -->
+<form action="index.html" method="get" width="300">
+    <fieldset>
+        <legend>GOOD LUCK!</legend>
+    <lable for="name">Your name</lable>
+    <!--the begining of the whole form, it is where the it collects the users name-->
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+    <!-- collect the email and makes sure it follows valid info and it is also where they get notifid if they won or not -->
+    <label for="email">Your email</label>
+    <input type="text" name="email" placeholder="Enter your email" required><br><br>
+    <!-- enter their birthdate here -->
+    <label for="birthdate">Your birthdate</label>
+    <!-- a dropdown menue of the users team.(there is too many teams, so i just put these) -->
+    <select name="team" id="team" required>
+        <option value="lakers">Los Angelas Lakers</option>
+        <option value="Chicago">Chicago Bulls</option>
+        <option value="mavs">Mavericks</option>
+        <option value="Timberwolves">Minnesota timberwolves</option>
+    </select><br><br>
+    <!-- i added a slid bar so that the user can pick what the number on thier jursey would be -->
+    <div class="slidcontainer">
+        <input type="range" min="1" max="100" value="100" class="slider" id="myrange"
+        oninput="showAmount(this.value)">
+    </div><br><br>
+    <span id="amount">100</span>
+    <!-- i used a little bit of java from a video i followd because i wanted it to show the number after sliding it -->
+    <script>
+    function showAmount(newAmount)
+    {
+        document.getElementById('amount').innerHTML=newAmount;
+    }
+    </script><br><br>
+    <button type="submit">Submit</button>
+    </fieldset>
+</form>
+</div>
 
     </body>
 </html>
